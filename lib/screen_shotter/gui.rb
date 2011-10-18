@@ -37,14 +37,12 @@ module ScreenShotter
       popup
     end
 
-    def image_from_relative_path(path)
-      Toolkit.getDefaultToolkit().getImage(File.expand_path(path,__FILE__))
+    def image(name)
+      Toolkit.getDefaultToolkit().getImage("lib/screen_shotter/#{name}")
     end
 
     def tray_icon
-      image = image_from_relative_path "../screenshoticon.gif"
-
-      trayIcon = TrayIcon.new(image,"Tray Demo",popup_menu)
+      trayIcon = TrayIcon.new(image("screenshoticon.gif"),"Tray Demo",popup_menu)
       trayIcon.setImageAutoSize(true)
       trayIcon
     end
