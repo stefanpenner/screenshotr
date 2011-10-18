@@ -24,5 +24,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'sinatra'
   s.add_runtime_dependency 'rest-client'
   s.add_runtime_dependency 'fog'
-  s.add_runtime_dependency 'jruby-openssl'
+  if defined? JRUBY_VERSION
+    s.add_runtime_dependency 'jruby-openssl'
+  end
 end
