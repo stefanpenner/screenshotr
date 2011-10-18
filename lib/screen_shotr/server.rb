@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'fog'
 require 'digest/sha1'
-java_import 'java.awt.datatransfer.StringSelection'
 
 module ScreenShotr
   class Server < Sinatra::Base
