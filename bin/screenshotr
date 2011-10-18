@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'screen_shotr'
+ScreenShotr::Gui.new
+loop do
+  sleep 1
+end

@@ -10,9 +10,8 @@ java_import 'java.awt.PopupMenu'
 java_import 'java.awt.MenuItem'
 java_import 'java.awt.TrayIcon'
 java_import 'java.awt.event.ActionListener'
-java_import 'java.awt.event.MouseListener'
 
-module ScreenShotter
+module ScreenShotr
   class Gui < JFrame
     java_implements 'ActionListener'
 
@@ -38,11 +37,11 @@ module ScreenShotter
     end
 
     def image(name)
-      Toolkit.getDefaultToolkit().getImage("lib/screen_shotter/#{name}")
+      Toolkit.get_default_toolkit().get_image("lib/screen_shotr/#{name}")
     end
 
     def tray_icon
-      trayIcon = TrayIcon.new(image("screenshoticon.gif"),"Tray Demo",popup_menu)
+      trayIcon = TrayIcon.new(image("screenshoticon.gif"),"Screen Shotter",popup_menu)
       trayIcon.setImageAutoSize(true)
       trayIcon
     end
@@ -64,7 +63,7 @@ module ScreenShotter
       screenShotListener = ActionListener.new
 
       def screenShotListener.actionPerformed(e)
-        ScreenShotter::ScreenCapture.snap
+        ScreenShotr::ScreenCapture.snap
       end
 
       screenShotItem.addActionListener(screenShotListener)

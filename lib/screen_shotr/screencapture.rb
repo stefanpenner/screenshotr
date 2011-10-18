@@ -10,7 +10,7 @@ java_import 'java.awt.datatransfer.StringSelection'
 
 require 'rest_client'
 
-module ScreenShotter
+module ScreenShotr
   module ScreenCapture
     extend self
     def snap
@@ -27,11 +27,12 @@ module ScreenShotter
                         :file => File.new('_tmp.jpg'))
 
       # get URL
-      FileUtils.rm_rf '_tmp.jpg'
 
       puts 'picture uploaded!'
       ss = StringSelection.new(public_url)
       Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, nil)
+    ensure
+      FileUtils.rm_rf '_tmp.jpg'
     end
   end
 end

@@ -1,22 +1,22 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'screen_shotter/version'
+require 'screen_shotr/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'screen_shotter'
-  s.version     = ScreenShotter::VERSION
+  s.name        = 'screen_shotr'
+  s.version     = ScreenShotr::VERSION
   s.authors     = ['Stefan Penner']
   s.email       = ['stefan.penner@gmail.com']
   s.homepage    = ''
   s.summary     = %q{test test test}
   s.description = %q{test test test test}
 
-  s.rubyforge_project = 'screen_shotter'
+  s.rubyforge_project = 'screen_shotr'
 
   s.files         = `git ls-files`.split('\n')
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split('\n')
-  s.executables   = ['screen_shotter']
-  s.default_executable = 'screen_shotter'
+  s.executables   = ['screenshotr']
+  s.default_executable = 'screenshotr'
   #s.require_paths = %w[lib lib/skullstatus]
 
   # specify any dependencies here; for example:

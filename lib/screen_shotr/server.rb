@@ -3,7 +3,7 @@ require 'fog'
 require 'digest/sha1'
 java_import 'java.awt.datatransfer.StringSelection'
 
-module ScreenShotter
+module ScreenShotr
   class Server < Sinatra::Base
     def storage
       #@storage ||= Fog::Storage.new({
