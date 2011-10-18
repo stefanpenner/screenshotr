@@ -21,6 +21,10 @@ module ScreenShotr
       storage.directories.find("data").first or storage.directories.create(:key => 'data' )
     end
 
+    get '/' do
+      "hello, world!"
+    end
+
     post '/picture/create' do
       file     = params[:file]
       data     = file[:tempfile]
